@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escompte Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="photo1.png" alt="University Logo" class="logo">
+</header>
+
+<div class="container">
+    <h1>Escompte Management</h1>
+
+    <form id="addEffectForm">
+        <h3>entre les details de l'effet</h3>
+
+        <label for="valNominale">Valeur Nominale:</label>
+        <input type="number" id="valNominale" required>
+
+        <label for="tauxEscompte">Taux Escompte (%):</label>
+        <input type="number" id="tauxEscompte" required>
+
+        <label for="dateEchea">Date d'échéance (dd/mm/yyyy):</label>
+        <input type="date" id="dateEchea" required min="2024-12-30">
+
+        <label for="njB">Nombre de Jours Banque:</label>
+        <input type="number" id="njB" required>
+
+        <label for="tauxEndoss">Taux Endossement (%)(si il n'y a pas d'endossment ecrire 0):</label>
+        <input type="number" id="tauxEndoss" required>
+
+        <label for="plac">Place (Select "placé " or "N'est pas placé"):</label>
+        <select id="plac" required>
+            <option value="0">N'est pas placé</option>
+            <option value="1">Placé</option>
+        </select>
+        <label for="montantPlace">Commission dans ce cas:</label>
+        <input type="number" id="montantPlace" required>
+
+        <label for="dom">Domicile (Select "Oui" or "Non"):</label>
+        <select id="dom" required>
+            <option value="0">Non</option>
+            <option value="1">Oui</option>
+        </select>
+        <label for="montantDomicilie">Commission dans ce cas:</label>
+        <input type="number" id="montantDomicilie" required>
+
+        <button type="submit">Add Effect</button>
+    </form>
+
+    <h2>Liste d'effets</h2>
+    <table id="effectsTable">
+        <thead>
+        <tr>
+            <th>Valeur Nominale</th>
+            <th>Date Échéance</th>
+            <th>NjE</th>
+            <th>AgjE</th>
+            <th>NjB</th>
+            <th>AgjB</th>
+            <th>AgE1</th>
+            <th>NjCE</th>
+            <th>AgCe</th>
+            <th>AgE2</th>
+            <th>AgCd</th>
+            <th>Total AG HT</th>
+            <th>TVA</th>
+            <th>Total AG TTC</th>
+            <th>Net Escompte</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Le bordereau d'escompte</h2>
+    <div id="summary"></div>
+</div>
+
+<footer>
+    <p>© Badreddine Younsi. C'est le projet de la matière "Introduction au système foncier & bancaire" sous demande de Mr. Amor Oueslati.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
